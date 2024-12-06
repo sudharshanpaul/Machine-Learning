@@ -1,0 +1,13 @@
+1. Program:
+     A program is a sequence of Intructions written in Programminf language
+     Eg. Google Chrome  which is a program how this browser should work
+
+2. Process:
+    A process is simply an instance of a program that is being executed
+    It works along with the OS
+    For every process there is seperate memory space is allocated.. do one process is not going to corrupt the other process
+
+    If we use multiple processes for switching the Process
+
+3. Thread:
+    It is unit of execution within a process

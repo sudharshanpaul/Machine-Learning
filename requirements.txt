@@ -1,3 +1,9 @@
+ipykernel
 scikit-learn
 bs4
 requests
+numpy
+pandas
+seaborn
+matplotlib
+flask

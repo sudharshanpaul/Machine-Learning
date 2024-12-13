@@ -9,3 +9,4 @@ matplotlib
 flask
 streamlit
 imblearn
+openpyxl

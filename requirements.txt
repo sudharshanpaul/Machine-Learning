@@ -10,3 +10,4 @@ flask
 streamlit
 imblearn
 openpyxl
+statsmodels

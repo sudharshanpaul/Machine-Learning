@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWI Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            text-align: center;
+            color: #4facfe;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+        input:focus {
+            border-color: #4facfe;
+            outline: none;
+            box-shadow: 0 0 8px rgba(79, 172, 254, 0.5);
+        }
+        button {
+            padding: 10px;
+            font-size: 18px;
+            background: #4facfe;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #3a8be0;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FWI Prediction</h1>
+        <!-- Main input for retrieving the data -->
+        <form action="{{ url_for('predict_datapoint') }}" method="post">
+            <input type="text" name="Temperature" placeholder="Temperature (°C)" required value="{{ request.form.get('Temperature', '') }}">
+            <input type="text" name="RH" placeholder="Relative Humidity (%)" required value="{{ request.form.get('RH', '') }}">
+            <input type="text" name="Ws" placeholder="Wind Speed (km/h)" required value="{{ request.form.get('Ws', '') }}">
+            <input type="text" name="Rain" placeholder="Rain (mm)" required value="{{ request.form.get('Rain', '') }}">
+            <input type="text" name="FFMC" placeholder="Fine Fuel Moisture Code" required value="{{ request.form.get('FFMC', '') }}">
+            <input type="text" name="DMC" placeholder="Duff Moisture Code" required value="{{ request.form.get('DMC', '') }}">
+            <input type="text" name="ISI" placeholder="Initial Spread Index" required value="{{ request.form.get('ISI', '') }}">
+            <input type="text" name="Classes" placeholder="Classes (e.g., Low/Moderate/High)" required value="{{ request.form.get('Classes', '') }}">
+            <input type="text" name="Region" placeholder="Region" required value="{{ request.form.get('Region', '') }}">
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        <h2>The FWI prediction is {{ results }}</h2>
+    </div>
+</body>
+</html>

@@ -11,3 +11,5 @@ streamlit
 imblearn
 openpyxl
 statsmodels
+plotly
+nbformat

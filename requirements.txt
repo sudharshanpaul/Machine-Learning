@@ -13,3 +13,4 @@ openpyxl
 statsmodels
 plotly
 nbformat
+xgboost

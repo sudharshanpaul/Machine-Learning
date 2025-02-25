@@ -15,3 +15,4 @@ plotly
 nbformat
 xgboost
 kneed
+redis

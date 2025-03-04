@@ -52,7 +52,7 @@ This repository is organized into the following folders:
 ### 7️⃣ Supervised Learning
 
 - Covers key machine learning algorithms:
-  - **Regression:** Linear Regression, Logistic Regression
+  - **Regression:** Linear Regression, Logistic Regression, KNN Regressor, SVM Regressor, Decision Tree Regressor, Naive Bayes Regressor
   - **Classification:** Naïve Bayes, Support Vector Machine (SVM), K-Nearest Neighbors (KNN), Decision Trees
   - **Ensemble Methods:** Random Forest, AdaBoost, XGBoost, Gradient Boosting
 

@@ -85,9 +85,6 @@ cd Machine-Learning
 
 Contributions are welcome! Feel free to submit issues, suggestions, or pull requests to enhance this repository.
 
-## 📜 License
-
-This repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
